@@ -47,3 +47,5 @@ app.*.map.json
 # Flutter launcher icons 
 flutter_launcher_icons-development.yaml
 flutter_launcher_icons-production.yaml
+
+secrets.properties
