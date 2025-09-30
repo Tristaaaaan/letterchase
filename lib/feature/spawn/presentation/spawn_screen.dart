@@ -16,49 +16,49 @@ class SpawnScreen extends StatelessWidget {
   }
 }
 
-// SIMULATE 
+// SIMULATE
 
-  // final repo = SpawnRepoImpl();
-  //                   int attempts = 0;
-  //                   SpawnLetterModel? finalLetter;
-  //                   List<String> finalStats = [];
+// final repo = SpawnRepoImpl();
+//                   int attempts = 0;
+//                   SpawnLetterModel? finalLetter;
+//                   List<String> finalStats = [];
 
-  //                   // Keep spawning until a Rare letter with 3 stats appears
-  //                   while (true) {
-  //                     attempts++;
+//                   // Keep spawning until a Rare letter with 3 stats appears
+//                   while (true) {
+//                     attempts++;
 
-  //                     // Spawn a letter
-  //                     final SpawnLetterModel? temp = await repo.spawnLetter();
+//                     // Spawn a letter
+//                     final SpawnLetterModel? temp = await repo.spawnLetter();
 
-  //                     if (temp == null) {
-  //                       developer.log("Attempt $attempts → Spawned: Nothing!");
-  //                       continue; // skip null spawns
-  //                     }
+//                     if (temp == null) {
+//                       developer.log("Attempt $attempts → Spawned: Nothing!");
+//                       continue; // skip null spawns
+//                     }
 
-  //                     // Only care about Rare letters
-  //                     if (temp.rarity != "Rare") {
-  //                       developer.log(
-  //                         "Attempt $attempts → Spawned: $temp | Not Rare",
-  //                       );
-  //                       continue;
-  //                     }
+//                     // Only care about Rare letters
+//                     if (temp.rarity != "Rare") {
+//                       developer.log(
+//                         "Attempt $attempts → Spawned: $temp | Not Rare",
+//                       );
+//                       continue;
+//                     }
 
-  //                     // Spawn stats for the Rare letter
-  //                     final stats = await repo.spawnStats(temp.rarity);
+//                     // Spawn stats for the Rare letter
+//                     final stats = await repo.spawnStats(temp.rarity);
 
-  //                     developer.log(
-  //                       "Attempt $attempts → Spawned Rare: $temp | Stats: ${stats.isEmpty ? 'None' : stats.join(', ')}",
-  //                     );
+//                     developer.log(
+//                       "Attempt $attempts → Spawned Rare: $temp | Stats: ${stats.isEmpty ? 'None' : stats.join(', ')}",
+//                     );
 
-  //                     // Check if it has exactly 3 stats
-  //                     if (stats.length == 3) {
-  //                       finalLetter = temp;
-  //                       finalStats = stats;
-  //                       break; // stop loop
-  //                     }
-  //                   }
+//                     // Check if it has exactly 3 stats
+//                     if (stats.length == 3) {
+//                       finalLetter = temp;
+//                       finalStats = stats;
+//                       break; // stop loop
+//                     }
+//                   }
 
-  //                   // Final result
-  //                   developer.log(
-  //                     "🎉 Got a Rare letter with 3 stats after $attempts attempts → Letter: ${finalLetter.letter} | Stats: ${finalStats.join(', ')}",
-  //                   );
+//                   // Final result
+//                   developer.log(
+//                     "🎉 Got a Rare letter with 3 stats after $attempts attempts → Letter: ${finalLetter.letter} | Stats: ${finalStats.join(', ')}",
+//                   );
