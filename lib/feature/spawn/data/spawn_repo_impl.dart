@@ -29,8 +29,10 @@ class SpawnRepoImpl extends SpawnRepository {
   @override
   Future<SpawnLetterModel?> spawnLetter() async {
     // 20% chance to get nothing
-    if (_random.nextInt(100) + 1 > 80) return null;
-
+    if (_random.nextInt(100) + 1 > 80) {
+      await Future.delayed(const Duration(seconds: 1));
+      return null;
+    }
     int roll = _random.nextInt(100) + 1;
     String rarity;
     List<String> pool;
@@ -50,6 +52,8 @@ class SpawnRepoImpl extends SpawnRepository {
     }
 
     String letter = pool[_random.nextInt(pool.length)];
+
+    await Future.delayed(const Duration(seconds: 1));
 
     return SpawnLetterModel(letter: letter, rarity: rarity);
   }
