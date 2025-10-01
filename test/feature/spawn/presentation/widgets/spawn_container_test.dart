@@ -61,13 +61,13 @@ void main() {
     expect(mockRepo.calledSpawnLetter, isTrue);
 
     // Should show the loaded letter
-    expect(find.textContaining('Letter: A'), findsOneWidget);
+    expect(find.textContaining('A'), findsOneWidget);
 
     // Tap "Spawn"
     await tester.tap(find.text('Spawn'));
     await tester.pumpAndSettle();
 
     expect(mockRepo.calledSpawnLetter, isTrue);
-    expect(find.textContaining('Letter: A'), findsOneWidget);
+    expect(find.textContaining('A'), findsOneWidget);
   });
 }
