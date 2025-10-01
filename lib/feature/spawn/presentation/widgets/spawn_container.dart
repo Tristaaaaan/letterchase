@@ -27,9 +27,23 @@ class SpawnContainer extends ConsumerWidget {
           child: Center(
             child: spawnState.when(
               empty: () => const Text('Nothing'),
-              initial: () => const CircularProgressIndicator(),
-              loading: () => const CircularProgressIndicator(),
-              loaded: (spawnData) => Text('Letter: ${spawnData?.letter ?? ""}'),
+              initial:
+                  () => CircularProgressIndicator(
+                    color: Theme.of(context).colorScheme.inversePrimary,
+                  ),
+              loading:
+                  () => CircularProgressIndicator(
+                    color: Theme.of(context).colorScheme.inversePrimary,
+                  ),
+              loaded:
+                  (spawnData) => Text(
+                    spawnData!.letter,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      fontSize: 125,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
               error: (e) => Text(e),
             ),
           ),
@@ -38,10 +52,10 @@ class SpawnContainer extends ConsumerWidget {
 
         RegularButton(
           text: "Spawn",
-          backgroundColor: Colors.green,
-          textColor: Colors.white,
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          textColor: Theme.of(context).colorScheme.surface,
           buttonKey: "spawnButton",
-          width: double.infinity,
+          width: 300,
           onTap: () async {
             final isLoading = ref.read(regularButtonLoadingProvider.notifier);
 
