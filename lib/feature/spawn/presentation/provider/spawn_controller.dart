@@ -15,7 +15,11 @@ class SpawnController extends StateNotifier<SpawnState> {
     try {
       final spawnData = await _spawnRepository.spawnLetter();
 
-      state = SpawnState.loaded(spawnData: spawnData);
+      if (spawnData == null) {
+        state = const SpawnState.empty();
+      } else {
+        state = SpawnState.loaded(spawnData: spawnData);
+      }
     } catch (e) {
       state = SpawnState.error(e.toString());
     }
