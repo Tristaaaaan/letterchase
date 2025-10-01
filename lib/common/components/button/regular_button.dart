@@ -46,6 +46,12 @@ class _RegularButtonState extends ConsumerState<RegularButton> {
   }
 
   @override
+  void dispose() {
+    _debouncer.dispose(); // ✅ cleanup
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final isLoading =
         ref.watch(regularButtonLoadingProvider)[widget.buttonKey] ?? false;
