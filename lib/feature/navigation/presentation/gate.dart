@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:letterchase/common/components/ad/banner_ad.dart';
 import 'package:letterchase/common/components/navbar/custom_navbar.dart';
 import 'package:letterchase/feature/settings/presentation/settings_screen.dart';
 import 'package:letterchase/feature/spawn/presentation/spawn_screen.dart';
@@ -27,10 +28,10 @@ class _NavigationGateState extends ConsumerState<NavigationGate> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      // appBar: AppBar(
-      //   surfaceTintColor: Colors.transparent,
-      //   title: const BannerAdWidget(),
-      // ),
+      appBar: AppBar(
+        surfaceTintColor: Colors.transparent,
+        title: const BannerAdWidget(),
+      ),
       body: Stack(
         alignment: Alignment.bottomCenter,
         children: [

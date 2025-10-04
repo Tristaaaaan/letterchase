@@ -54,6 +54,9 @@ android {
         targetSdk = 36
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        secrets.getProperty("ADS_APPLICATION_ID")?.let {
+            resValue("string", "ad_app_id", it)
+        }
     }
 
     signingConfigs {
@@ -67,6 +70,7 @@ android {
             storeFile = keystoreProperties.getProperty("storeFile")?.let { file(it) }
             storePassword = keystoreProperties.getProperty("storePassword")
         }
+
     }
 
     buildTypes {
